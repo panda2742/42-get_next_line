@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehosta <ehosta@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 15:14:50 by ehosta            #+#    #+#             */
-/*   Updated: 2025/01/14 10:29:42 by ehosta           ###   ########.fr       */
+/*   Created: 2025/01/14 10:17:54 by ehosta            #+#    #+#             */
+/*   Updated: 2025/01/14 10:20:04 by ehosta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 ssize_t	get_nl_pos(const char *s, int len)
 {
@@ -79,7 +79,7 @@ char	*get_next_line(int fd)
 	ssize_t		read_bytes;
 	int			end;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= FOPEN_MAX)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > FOPEN_MAX)
 		return (NULL);
 	end = 0;
 	res = join_res_buffer(
