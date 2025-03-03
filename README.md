@@ -1,6 +1,6 @@
 # get_next_line
 
-This functions allows us to read a file descriptor line by line, using a static variable. This function is also included in my maintained libft.
+Read multiple fds at the same time, line by line.
 
 | Project | get_next_line              |
 |:--------|---------------------------:|
